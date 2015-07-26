@@ -29,7 +29,7 @@ function onPushSubscription(pushSubscription) {
   // In this demo we just use send these values to
   // our server via XHR which sends a push message.
   window.PushDemo.ui.showGCMPushOptions(true);
-  window.PushDemo.ui.setPushSwitchDisabled(false);
+  window.PushDemo.ui.setPushSwitchDisabled(true);
 
   console.log('pushSubscription: ', pushSubscription);
 
@@ -87,7 +87,7 @@ function onPushSubscription(pushSubscription) {
 function subscribeDevice() {
   // Disable the switch so it can't be changed while
   // we process permissions
-  window.PushDemo.ui.setPushSwitchDisabled(true);
+  window.PushDemo.ui.setPushSwitchDisabled(false);
 
   // We need the service worker registration to access the push manager
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
